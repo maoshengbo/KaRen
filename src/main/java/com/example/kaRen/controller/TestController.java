@@ -16,4 +16,10 @@ public class TestController {
         model.addAttribute("hello","1233");
         return "Helloqwe";
     }
+    @RequestMapping(value = "/index1")
+    public String toIndex1(ModelMap model){
+        System.out.println("index");
+        model.addAttribute("hello","1233");
+        return "layui";
+    }
 }
