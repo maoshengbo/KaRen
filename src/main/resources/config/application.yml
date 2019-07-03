@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  context-path: /karen  #http:localhost:8080/karen
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    initial-size: 5
+    max-idle: 10
+    max-wait: 10000
+    min-idle: 5
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;serverTimezone=Asia/Shanghai
+    username: root
+  #jsp页面
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  profiles:
+    active: test
+#html页面
+#spring.mvc.view.prefix=/templates/
+#spring.mvc.view.suffix=.html
+#mybatis
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper.*.xml
